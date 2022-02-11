@@ -20,7 +20,7 @@ const UserSchema = mongoose.Schema({
         maxlength: 50
     },
     role: {   
-        type: Number;
+        type: Number,
         default: 0
     },
     image: String,
@@ -33,6 +33,6 @@ const UserSchema = mongoose.Schema({
 
 })
 
-const user = mongoose.model('User', UserSchema)  // 모델로 스키마를 감싸준다
+const User = mongoose.model('User', UserSchema)  // 모델로 스키마를 감싸준다
 
-module.exports = { User} // 다른 곳에서도 쓸 수 있게 해준다
+module.exports = {User} // 다른 곳에서도 쓸 수 있게 해준다
